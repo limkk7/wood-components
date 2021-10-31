@@ -13,7 +13,7 @@ const Icon: React.FC<IconProps> = ({ className, name, ...restProps }) => {
   return (
     <span>
       <svg
-        className={classnames("icon", className)}
+        className={classnames("wood-ui-icon", className)}
         aria-hidden="true"
         {...restProps}
       >
