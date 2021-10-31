@@ -43,9 +43,9 @@ jobs:
           at: .
       - run: npm run ci
       - store_test_results:
-          path: ./reports/junit/
+          path: reports/junit/
       - store_artifacts:
-          path: ./reports/junit
+          path: reports/junit
   publish:
     <<: *defaults
     steps:
