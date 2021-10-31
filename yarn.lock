@@ -1501,6 +1501,11 @@
   "resolved" "https://registry.npmjs.org/ansi-regex/-/ansi-regex-4.1.0.tgz"
   "version" "4.1.0"
 
+"ansi-regex@^5.0.1":
+  "integrity" "sha1-CCyyyJyf6GWaMRpTvWpNxTAdswQ="
+  "resolved" "https://registry.npmmirror.com/ansi-regex/download/ansi-regex-5.0.1.tgz"
+  "version" "5.0.1"
+
 "ansi-styles@^2.2.1":
   "integrity" "sha1-tDLdM1i2NM914eRmQ2gkBTPB3b4="
   "resolved" "https://registry.npmjs.org/ansi-styles/-/ansi-styles-2.2.1.tgz"
@@ -4647,6 +4652,16 @@
     "pretty-format" "^24.3.1"
     "throat" "^4.0.0"
 
+"jest-junit@^13.0.0":
+  "integrity" "sha1-R5vjR0V6rZiuilmDoj18PsUmyaM="
+  "resolved" "https://registry.npmmirror.com/jest-junit/download/jest-junit-13.0.0.tgz"
+  "version" "13.0.0"
+  dependencies:
+    "mkdirp" "^1.0.4"
+    "strip-ansi" "^6.0.1"
+    "uuid" "^8.3.2"
+    "xml" "^1.0.1"
+
 "jest-leak-detector@^24.3.1":
   "integrity" "sha512-GncRwEtAw/SohdSyY4bk2RE06Ac1dZrtQGZQ2j35hSuN4gAAAKSYMszJS2WDixsAEaFN+GHBHG+d8pjVGklKyw=="
   "resolved" "https://registry.npmjs.org/jest-leak-detector/-/jest-leak-detector-24.3.1.tgz"
@@ -5398,6 +5413,11 @@
   "version" "0.5.1"
   dependencies:
     "minimist" "0.0.8"
+
+"mkdirp@^1.0.4":
+  "integrity" "sha1-PrXtYmInVteaXw4qIh3+utdcL34="
+  "resolved" "https://registry.npmmirror.com/mkdirp/download/mkdirp-1.0.4.tgz"
+  "version" "1.0.4"
 
 "moo@^0.5.0":
   "integrity" "sha1-eq5/OEubCfYgtqv29067zRtl28Q="
@@ -7376,6 +7396,13 @@
   dependencies:
     "ansi-regex" "^4.1.0"
 
+"strip-ansi@^6.0.1":
+  "integrity" "sha1-nibGPTD1NEPpSJSVshBdN7Z6hdk="
+  "resolved" "https://registry.npmmirror.com/strip-ansi/download/strip-ansi-6.0.1.tgz"
+  "version" "6.0.1"
+  dependencies:
+    "ansi-regex" "^5.0.1"
+
 "strip-bom@^3.0.0":
   "integrity" "sha1-IzTBjpx1n3vdVv3vfprj1YjmjtM="
   "resolved" "https://registry.npmjs.org/strip-bom/-/strip-bom-3.0.0.tgz"
@@ -7860,6 +7887,11 @@
   "resolved" "https://registry.npmjs.org/uuid/-/uuid-3.3.2.tgz"
   "version" "3.3.2"
 
+"uuid@^8.3.2":
+  "integrity" "sha1-gNW1ztJxu5r2xEXyGhoExgbO++I="
+  "resolved" "https://registry.npmmirror.com/uuid/download/uuid-8.3.2.tgz"
+  "version" "8.3.2"
+
 "v8-compile-cache@^2.0.2":
   "integrity" "sha512-1wFuMUIM16MDJRCrpbpuEPTUGmM5QMUg0cr3KFwra2XgOgFcPGDQHDh3CszSCD2Zewc/dh/pamNEW8CbfDebUw=="
   "resolved" "https://registry.npmjs.org/v8-compile-cache/-/v8-compile-cache-2.0.2.tgz"
@@ -8164,6 +8196,11 @@
   "integrity" "sha512-A5CUptxDsvxKJEU3yO6DuWBSJz/qizqzJKOMIfUJHETbBw/sFaDxgd6fxm1ewUaM0jZ444Fc5vC5ROYurg/4Pw=="
   "resolved" "https://registry.npmjs.org/xml-name-validator/-/xml-name-validator-3.0.0.tgz"
   "version" "3.0.0"
+
+"xml@^1.0.1":
+  "integrity" "sha1-eLpyAgApxbyHuKgaPPzXS0ovweU="
+  "resolved" "https://registry.npmmirror.com/xml/download/xml-1.0.1.tgz"
+  "version" "1.0.1"
 
 "xregexp@4.0.0":
   "integrity" "sha512-PHyM+sQouu7xspQQwELlGwwd05mXUFqwFYfqPO0cC7x4fxyHnnuetmQr6CjJiafIDoH4MogHb9dOoJzR/Y4rFg=="
