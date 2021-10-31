@@ -1,1 +1,1 @@
-# wood-UI
+# wood-UI [![CircleCI](https://circleci.com/gh/versionlin7/wood-components/tree/master.svg?style=svg)](https://circleci.com/gh/versionlin7/wood-components/tree/master)
