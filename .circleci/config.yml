@@ -62,6 +62,9 @@ workflows:
       - build:
           requires:
             - test
+          filters:
+            branches:
+              only: master
       - test:
           requires:
             - prepare
@@ -70,6 +73,6 @@ workflows:
             - build
           filters:
             branches:
-              ignore: /.*/
+              only: master
             tags:
               only: /^v.*/
