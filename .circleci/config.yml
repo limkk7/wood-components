@@ -1,7 +1,7 @@
 #https://github.com/revolunet/create-react-app-circleci/blob/master/.circleci/config.yml
 defaults: &defaults
   docker:
-    - image: circleci/node:8
+    - image: circleci/node:14
 
 version: 2
 jobs:
@@ -40,6 +40,8 @@ jobs:
     steps:
       - checkout
       - run: npm run ci
+      - attach_workspace:
+          at: .
       - store_test_results:
           path: ./test-results/junit/
       - store_artifacts:
