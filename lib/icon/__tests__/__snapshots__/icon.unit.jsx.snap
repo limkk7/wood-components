@@ -1,0 +1,14 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`icon render successfully 1`] = `
+<span>
+  <svg
+    aria-hidden="true"
+    className="icon"
+  >
+    <use
+      xlinkHref="#qq"
+    />
+  </svg>
+</span>
+`;
