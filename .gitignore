@@ -1,5 +1,6 @@
 /.idea
 /dist/*
+junit.xml
 # Logs
 logs
 *.log
