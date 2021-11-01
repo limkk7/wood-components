@@ -3,23 +3,22 @@ import "./icon.scss";
 import "./importIcons";
 import classnames from "../helpers/classes";
 
-interface IconProps {
+interface IconProps extends React.SVGAttributes<SVGElement> {
   name: string;
-  className?: string;
-  onClick?: React.MouseEventHandler<SVGElement>;
+  // className?: string;
+  // onClick?: React.MouseEventHandler<SVGElement>;
 }
 
-const Icon: React.FC<IconProps> = ({ className, name, ...restProps }) => {
+const Icon: React.FC<IconProps> = ({
+  className,
+  name,
+  children,
+  ...restProps
+}) => {
   return (
-    <span>
-      <svg
-        className={classnames("w-ui-icon", className)}
-        aria-hidden="true"
-        {...restProps}
-      >
-        <use xlinkHref={`#${name}`}></use>
-      </svg>
-    </span>
+    <svg className={classnames("w-ui-icon", className)} {...restProps}>
+      <use xlinkHref={`#${name}`}></use>
+    </svg>
   );
 };
 
