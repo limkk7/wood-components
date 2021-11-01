@@ -1,38 +1,62 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import { HashRouter as Router, Route, Link } from "react-router-dom";
+import { HashRouter as Router, Route, Link, NavLink } from "react-router-dom";
 import IconExample from "./lib/icon/icon.example";
 import ButtonExample from "./lib/button.example";
 import DialogExample from "./lib/dialog/dialog.example";
+import LayoutExample from "./lib/layout/layout.example";
+import { Layout, Header, Aside, Content, Footer, Icon } from "./lib/index";
+import "./example.scss";
 
 ReactDOM.render(
   <Router>
-    <div>
-      <header>
-        <div className="logo">FUI</div>
-      </header>
-      <div>
-        <aside>
+    <Layout className="index-layout">
+      <Header className="header">
+        <Link to="/">
+          <Icon name="wood" className="logo" />
+        </Link>
+      </Header>
+      <Layout className="main">
+        <Aside className="aside">
           <h2>组件</h2>
           <ul>
             <li>
-              <Link to="/icon">Icon</Link>
+              <NavLink to="/icon">Icon</NavLink>
             </li>
             <li>
-              <Link to="/button">Button</Link>
+              <NavLink to="/button">Button</NavLink>
             </li>
             <li>
-              <Link to="/dialog">dialog</Link>
+              <NavLink to="/dialog">dialog</NavLink>
+            </li>
+            <li>
+              <NavLink to="/layout">layout</NavLink>
             </li>
           </ul>
-        </aside>
-        <main>
+        </Aside>
+        <Content className="content">
           <Route path="/icon" component={IconExample} />
           <Route path="/button" component={ButtonExample} />
           <Route path="/dialog" component={DialogExample} />
-        </main>
-      </div>
-    </div>
+          <Route path="/layout" component={LayoutExample} />
+        </Content>
+      </Layout>
+      <Footer className="footer">
+        <ul>
+          <li>
+            <Icon name="wood" className="logo" />
+          </li>
+          <li>
+            <a
+              href="https://github.com/versionlin7/wood-components"
+              target="__blank"
+            >
+              <Icon name="github" className="github" />
+            </a>
+          </li>
+        </ul>
+      </Footer>
+    </Layout>
   </Router>,
   document.querySelector("#root")
 );
