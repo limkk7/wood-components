@@ -7,12 +7,12 @@ module.exports = Object.assign({}, base, {
     path: path.resolve(__dirname, 'doc'),
   },
   entry: {
-    example: './example.tsx',
+    example: './lib/example.tsx',
   },
   plugins: [
     new HtmlWebpackPlugin({
       title: 'WoodUI',
-      template: 'example.html',
+      template: './lib/example.html',
       filename: 'index.html'
     })
   ],

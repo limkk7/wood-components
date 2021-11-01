@@ -1,12 +1,12 @@
 const path = require('path')
 module.exports = {
   entry: {
-    index: './index.tsx'
+    index: './lib/index.tsx'
   },
   resolve: {
     extensions: ['.ts', '.tsx', '.js', '.jsx'],
+    modules: [path.resolve(__dirname, "lib"), "node_modules"]
   },
-  context: path.resolve(__dirname, 'lib'),
   output: {
     path: path.resolve(__dirname, 'dist/lib'),
     library: 'WoodUI',

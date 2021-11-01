@@ -3,12 +3,12 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 module.exports = Object.assign({}, base, {
     mode: 'development',
     entry: {
-        example: './example.tsx'
+        example: './lib/example.tsx'
     },
     plugins: [
         new HtmlWebpackPlugin({
             title: 'WoodUI',
-            template: 'example.html'
+            template: './lib/example.html'
         })
     ],
 })

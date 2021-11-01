@@ -4,6 +4,16 @@ import Header from "./layout/header";
 import Aside from "./layout/aside";
 import Content from "./layout/content";
 import Footer from "./layout/footer";
-import Dialog from "./dialog/dialog";
+import { Dialog, alert, confirm, modal } from "./dialog/dialog";
 export { default as Icon } from "./icon/icon";
-export { Layout, Header, Aside, Content, Footer, Dialog };
+export {
+  Layout,
+  Header,
+  Aside,
+  Content,
+  Footer,
+  Dialog,
+  alert,
+  confirm,
+  modal,
+};

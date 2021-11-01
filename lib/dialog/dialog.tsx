@@ -130,5 +130,4 @@ const confirm = (
   const onClose = modal(content, buttons, reject);
 };
 
-export default Dialog;
-export { alert, confirm, modal };
+export { alert, confirm, modal, Dialog };

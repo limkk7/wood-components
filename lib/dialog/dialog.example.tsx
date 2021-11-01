@@ -1,6 +1,6 @@
 import * as React from "react";
 import { useState } from "react";
-import Dialog, { alert, confirm, modal } from "./dialog";
+import { alert, confirm, modal, Dialog } from "index";
 
 export default () => {
   const [x, setX] = useState(false);
