@@ -6,6 +6,7 @@ module.exports = {
   resolve: {
     extensions: ['.ts', '.tsx', '.js', '.jsx'],
   },
+  // context: path.resolve(__dirname, 'lib'),
   output: {
     path: path.resolve(__dirname, 'dist/lib'),
     library: 'XUI',
@@ -22,7 +23,7 @@ module.exports = {
         loader: 'svg-sprite-loader',
       },
       {
-        test: /\.scss$/,
+        test: /\.(scss|css)$/,
         use: ['style-loader', 'css-loader', 'sass-loader']
       }
     ]
