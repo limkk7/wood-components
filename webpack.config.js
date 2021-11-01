@@ -5,7 +5,7 @@ module.exports = {
   },
   resolve: {
     extensions: ['.ts', '.tsx', '.js', '.jsx'],
-    modules: [path.resolve(__dirname, "lib"), "node_modules"]
+    modules: ["node_modules", path.resolve(__dirname, "lib")]
   },
   output: {
     path: path.resolve(__dirname, 'dist/lib'),
