@@ -18,7 +18,7 @@ interface Props {
   title?: ReactNode;
   describe?: ReactNode;
   closeOnClickMask?: boolean;
-  onClose: MouseEventHandler;
+  onClose?: MouseEventHandler;
 }
 const scopedClass = scopedClassMaker("w-ui-dialog");
 const sc = scopedClass;
