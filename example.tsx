@@ -3,9 +3,9 @@ import ReactDOM from "react-dom";
 import { HashRouter as Router, Route, Link, NavLink } from "react-router-dom";
 import IconExample from "./lib/icon/icon.example";
 import ButtonExample from "./lib/button.example";
-import DialogExample from "./lib/dialog/dialog.example";
 import LayoutExample from "./lib/layout/layout.example";
 import { Layout, Header, Aside, Content, Footer, Icon } from "./lib/index";
+import DialogDemo from "./lib/dialog/dialog.demo";
 import "./example.scss";
 
 ReactDOM.render(
@@ -27,7 +27,7 @@ ReactDOM.render(
               <NavLink to="/button">Button</NavLink>
             </li>
             <li>
-              <NavLink to="/dialog">dialog</NavLink>
+              <NavLink to="/dialog">Dialog</NavLink>
             </li>
             <li>
               <NavLink to="/layout">layout</NavLink>
@@ -37,7 +37,7 @@ ReactDOM.render(
         <Content className="content">
           <Route path="/icon" component={IconExample} />
           <Route path="/button" component={ButtonExample} />
-          <Route path="/dialog" component={DialogExample} />
+          <Route path="/dialog" component={DialogDemo} />
           <Route path="/layout" component={LayoutExample} />
         </Content>
       </Layout>
