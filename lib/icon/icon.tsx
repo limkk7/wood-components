@@ -1,7 +1,7 @@
 import * as React from "react";
 import "./icon.scss";
 import "./importIcons";
-import classnames from "../helpers/classnames";
+import classnames from "../helpers/classes";
 
 interface IconProps {
   name: string;
@@ -13,7 +13,7 @@ const Icon: React.FC<IconProps> = ({ className, name, ...restProps }) => {
   return (
     <span>
       <svg
-        className={classnames("wood-ui-icon", className)}
+        className={classnames("w-ui-icon", className)}
         aria-hidden="true"
         {...restProps}
       >

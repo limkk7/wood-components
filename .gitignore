@@ -1,6 +1,7 @@
 /.idea
 /dist/*
 /reports
+.vscode
 # Logs
 logs
 *.log

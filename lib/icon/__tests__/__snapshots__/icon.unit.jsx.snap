@@ -4,7 +4,7 @@ exports[`icon render successfully 1`] = `
 <span>
   <svg
     aria-hidden="true"
-    className="icon"
+    className="w-ui-icon"
   >
     <use
       xlinkHref="#qq"

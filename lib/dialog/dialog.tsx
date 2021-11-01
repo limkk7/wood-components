@@ -20,7 +20,7 @@ interface Props {
   closeOnClickMask?: boolean;
   onClose: MouseEventHandler;
 }
-const scopedClass = scopedClassMaker("wood-ui-dialog");
+const scopedClass = scopedClassMaker("w-ui-dialog");
 const sc = scopedClass;
 
 const Dialog: React.FC<Props> = ({
@@ -47,7 +47,7 @@ const Dialog: React.FC<Props> = ({
   const portalNode = visible && (
     <>
       {enableMask && <div className={sc("mask")} onClick={onClickMask}></div>}
-      <div className="wood-ui-dialog">
+      <div className="w-ui-dialog">
         {closeMark ? (
           <div className={sc("close")} onClick={onClickClose}>
             <Icon name="close"></Icon>
