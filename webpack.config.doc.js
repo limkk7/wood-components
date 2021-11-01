@@ -11,6 +11,7 @@ module.exports = Object.assign({}, base, {
   },
   plugins: [
     new HtmlWebpackPlugin({
+      title: 'WoodUI',
       template: 'example.html',
       filename: 'index.html'
     })

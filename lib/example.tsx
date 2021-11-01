@@ -1,11 +1,11 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import { HashRouter as Router, Route, Link, NavLink } from "react-router-dom";
-import IconExample from "./lib/icon/icon.example";
-import ButtonExample from "./lib/button.example";
-import LayoutExample from "./lib/layout/layout.example";
-import { Layout, Header, Aside, Content, Footer, Icon } from "./lib/index";
-import DialogDemo from "./lib/dialog/dialog.demo";
+import IconExample from "./icon/icon.example";
+import ButtonExample from "./button.example";
+import LayoutExample from "./layout/layout.example";
+import { Layout, Header, Aside, Content, Footer, Icon } from "./index";
+import DialogDemo from "./dialog/dialog.demo";
 import "./example.scss";
 
 ReactDOM.render(

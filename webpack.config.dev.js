@@ -7,7 +7,7 @@ module.exports = Object.assign({}, base, {
     },
     plugins: [
         new HtmlWebpackPlugin({
-            title: 'X-UI',
+            title: 'WoodUI',
             template: 'example.html'
         })
     ],
