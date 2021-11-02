@@ -59,6 +59,11 @@ workflows:
   build_accept_deploy:
     jobs:
       - prepare
+          filters:
+            branches:
+              only: master
+            tags:
+              only: /^v.*/
       - build:
           requires:
             - test
@@ -71,8 +76,4 @@ workflows:
       - publish:
           requires:
             - build
-          filters:
-            branches:
-              only: master
-            tags:
-              only: /^v.*/
+
