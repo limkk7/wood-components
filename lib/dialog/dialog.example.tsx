@@ -1,6 +1,6 @@
 import * as React from "react";
 import { useState } from "react";
-import { alert, confirm, modal, Dialog } from "index";
+import { alert, confirm, modal, Dialog } from "wood-components";
 
 export default () => {
   const [x, setX] = useState(false);

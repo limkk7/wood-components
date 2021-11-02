@@ -1,15 +1,15 @@
 const path = require('path')
 module.exports = {
   entry: {
-    index: './lib/index.tsx'
+    index: './lib/wood-components.tsx'
   },
   resolve: {
     extensions: ['.ts', '.tsx', '.js', '.jsx'],
-    modules: [path.resolve(__dirname, "lib"), "node_modules"]
+    modules: ["node_modules", path.resolve(__dirname, "lib")]
   },
   output: {
+    library: "wood-ui",
     path: path.resolve(__dirname, 'dist/lib'),
-    library: 'WoodUI',
     libraryTarget: 'umd',
   },
   module: {

@@ -1,4 +1,5 @@
-[class^="w-ui-"] {
+[class^="w-ui-"],
+[class*=" w-ui-"] {
   box-sizing: border-box;
   &::after,
   &::before {

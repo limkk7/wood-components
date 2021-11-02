@@ -3,6 +3,7 @@
 /reports
 .vscode
 /doc/
+.history
 # Logs
 logs
 *.log
