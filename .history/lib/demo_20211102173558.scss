@@ -1,0 +1,15 @@
+.wood-demo {
+  .wood-show-code,
+  .wood-hidden-code {
+    display: flex;
+  }
+  .wood-show-code {
+    height: 100%;
+    visibility: visible;
+    transition: all 1s;
+  }
+  .wood-hidden-code {
+    height: 0;
+    visibility: hidden;
+  }
+}

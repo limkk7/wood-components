@@ -1,0 +1,17 @@
+.wood-demo {
+  border: 1px solid #d9d9d9;
+  border-radius: 6px;
+  .wood-show-code,
+  .wood-hidden-code {
+    display: flex;
+  }
+  .wood-show-code {
+    height: 100%;
+    visibility: visible;
+    transition: all 1s;
+  }
+  .wood-hidden-code {
+    height: 0;
+    visibility: hidden;
+  }
+}

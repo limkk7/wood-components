@@ -1,0 +1,27 @@
+.demo {
+  max-width: 1000px;
+  margin: 20px auto;
+  > .container {
+    padding: 40px 32px;
+    border: 1px solid rgba(0, 0, 0, 0.15);
+    border-bottom: none;
+    border-top-right-radius: 4px;
+    border-top-left-radius: 4px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+  }
+  .wood-show-code,
+  .wood-hidden-code {
+    display: flex;
+  }
+  .wood-show-code {
+    height: 100%;
+    visibility: visible;
+    transition: all 1s;
+  }
+  .wood-hidden-code {
+    height: 0;
+    visibility: hidden;
+  }
+}

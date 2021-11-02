@@ -1,0 +1,28 @@
+import * as React from "react";
+import classnames, { scopedClassMaker } from "helpers/classes";
+import "./button.scss";
+import { useState } from "react";
+interface Props extends React.ButtonHTMLAttributes<HTMLButtonElement> {
+  theme?: string;
+}
+const sc = scopedClassMaker("w-ui-button");
+
+const Button: React.FC<Props> = ({
+  className,
+  theme = "",
+  children,
+  ...rest
+}) => {
+  const classes = React.useMemo(
+    () => classnames(sc({ "": true, [theme]: true }), className),
+    [theme, className]
+  );
+
+  return (
+    <button className={classes} {...rest}>
+      {children}
+    </button>
+  );
+};
+
+export { Button };
