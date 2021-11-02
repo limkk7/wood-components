@@ -41,7 +41,7 @@ jobs:
       - checkout
       - attach_workspace:
           at: .
-      - run: npm run ci
+      - run: npm run test
       - store_test_results:
           path: reports/junit/
       - store_artifacts:
