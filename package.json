@@ -2,7 +2,7 @@
   "name": "wood-components",
   "version": "0.0.10",
   "description": "",
-  "main": "dist/lib/wood-components",
+  "main": "dist/lib/index.js",
   "types": "dist/lib/wood-components",
   "files": [
     "/dist/**/*"
