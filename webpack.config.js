@@ -8,7 +8,7 @@ module.exports = {
     modules: ["node_modules", path.resolve(__dirname, "lib")]
   },
   output: {
-    library: "wood-ui",
+    library: "wood-components",
     path: path.resolve(__dirname, 'dist/lib'),
     libraryTarget: 'umd',
   },
