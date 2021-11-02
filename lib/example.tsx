@@ -1,12 +1,12 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import { HashRouter as Router, Route, Link, NavLink } from "react-router-dom";
-import IconExample from "./icon/icon.example";
-import ButtonExample from "./button.example";
-import LayoutExample from "./layout/layout.example";
-import { Layout, Header, Aside, Content, Footer, Icon } from "./index";
-import DialogDemo from "./dialog/dialog.demo";
-import "./example.scss";
+import IconExample from "icon/icon.example";
+import ButtonExample from "button/button.example";
+import LayoutExample from "layout/layout.example";
+import { Layout, Header, Aside, Content, Footer, Icon } from "wood-components";
+import DialogDemo from "dialog/dialog.demo";
+import "example.scss";
 
 ReactDOM.render(
   <Router>
