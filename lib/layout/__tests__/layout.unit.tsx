@@ -1,6 +1,6 @@
 import * as renderer from "react-test-renderer";
 import * as React from "react";
-import { Layout, Header, Content } from "wood-components";
+import { Layout, Header, Content } from "../../wood-components";
 
 describe("layout", () => {
   it("是个 layout", () => {

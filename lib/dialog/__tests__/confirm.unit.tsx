@@ -1,6 +1,6 @@
 import * as renderer from "react-test-renderer";
 import * as React from "react";
-import { confirm, Button } from "wood-components";
+import { confirm, Button } from "../../wood-components";
 
 describe("测试 dialog", () => {
   it("confirm", () => {
