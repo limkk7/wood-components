@@ -104,16 +104,18 @@ const modal = (
   return close;
 };
 
-const alert = (content: ReactNode) => {
+const alert = (content: ReactNode, buttonText = "Ok") => {
   const onClose = modal(content, [
-    <button onClick={() => onClose()}>OK</button>,
+    <button onClick={() => onClose()}>{buttonText}</button>,
   ]);
 };
 
 const confirm = (
   content: ReactNode,
   resolve?: () => void,
-  reject?: () => void
+  reject?: () => void,
+  yesText = "Yes",
+  noText = "No"
 ) => {
   const onYes = () => {
     resolve && resolve();
@@ -124,8 +126,8 @@ const confirm = (
     onClose();
   };
   const buttons = [
-    <button onClick={onNo}>No</button>,
-    <button onClick={onYes}>Yes</button>,
+    <button onClick={onNo}>{noText}</button>,
+    <button onClick={onYes}>{yesText}</button>,
   ];
   const onClose = modal(content, buttons, reject);
 };

@@ -30,6 +30,7 @@
     .code-example {
       display: flex;
       .wrapper {
+        background-color: #444444;
         border-radius: 0 0 6px 6px;
         overflow: auto;
         width: 0;
@@ -59,7 +60,7 @@
   .wood-show-code {
     height: 100%;
     visibility: visible;
-    transition: all 1s;
+    transition: all 0.5s;
   }
   .wood-hidden-code {
     height: 0;

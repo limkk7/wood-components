@@ -4,11 +4,13 @@ import { Button } from "wood-components";
 const ButtonExample: React.FC = () => {
   return (
     <>
-      <Button className="hello">button</Button>
-      <Button theme="link" className="hi">
-        hi
+      <Button theme="primary" className="hello">
+        primary button
       </Button>
-      <Button theme="text">hi</Button>
+      <Button>Button</Button>
+      <Button theme="danger">danger</Button>
+      <Button theme="link">Hello</Button>
+      <Button theme="text">Hi</Button>
     </>
   );
 };

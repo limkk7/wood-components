@@ -34,6 +34,24 @@
   &::-moz-focus-inner {
     border: 0;
   }
+  &.w-ui-button-primary {
+    background-color: #0070f3;
+    color: white;
+  }
+  &.w-ui-button-danger {
+    border: 0;
+    outline: none;
+    background-color: #ee0000;
+    color: white;
+    &:hover,
+    &:focus {
+      border: 0;
+      outline: none;
+    }
+    &::-moz-focus-inner {
+      border: 0;
+    }
+  }
   &.w-ui-button-link {
     border-color: transparent;
     box-shadow: none;
@@ -52,16 +70,44 @@
       background: darken(white, 5%);
     }
   }
-  &.w-ui-button-wave {
-    animation: 0.15s ease 1 forwards ripple-effect;
-  }
-  @keyframes ripple-effect {
-    0% {
+  &.w-ui-button {
+    &[disabled] {
+      background-color: #f2f2f2;
+      cursor: not-allowed;
+      color: $grey;
+      &:hover {
+        border-color: $grey;
+      }
     }
-
-    100% {
-      color: white;
-      box-shadow: 1px 2px 3px 6px rgba(64, 169, 255, 0.38);
+  }
+  &.w-ui-button-link,
+  &.w-ui-button-text {
+    &[disabled] {
+      background: white;
+      cursor: not-allowed;
+      color: $grey;
+    }
+  }
+  &.w-ui-button-loadingIndicator {
+    vertical-align: middle;
+    > .w-ui-loadingIndicator {
+      width: 14px;
+      height: 14px;
+      display: inline-block;
+      margin-right: 4px;
+      border-radius: 8px;
+      border-color: $blue $blue $blue transparent;
+      border-style: solid;
+      border-width: 2px;
+      animation: w-ui-spin 1s infinite linear;
+    }
+    @keyframes w-ui-spin {
+      0% {
+        transform: rotate(0deg);
+      }
+      100% {
+        transform: rotate(360deg);
+      }
     }
   }
 }
