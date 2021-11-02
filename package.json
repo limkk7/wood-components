@@ -1,6 +1,6 @@
 {
   "name": "wood-components",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "",
   "main": "dist/lib/wood-components",
   "types": "dist/lib/wood-components",
