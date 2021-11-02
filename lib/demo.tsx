@@ -1,9 +1,12 @@
 import * as React from "react";
 import hljs from "highlight.js";
 import { useState, useEffect } from "react";
+import { Button } from "wood-components";
 import "highlight.js/styles/dark.css";
+import "./demo.scss";
 interface Props {
   code: string;
+  description?: string;
 }
 
 const Demo: React.FC<Props> = (props) => {
@@ -18,25 +21,23 @@ const Demo: React.FC<Props> = (props) => {
     });
   });
   return (
-    <div style={{ border: "1px solid blue" }}>
-      <div style={{ border: "1px solid green" }}>{props.children}</div>
-      <div style={{ border: "1px solid red" }}>
-        <button onClick={() => setCodeVisible(!codeVisible)}>查看代码</button>
-        <div style={{ display: "flex" }}>
-          {codeVisible && (
-            <pre
-              className="language-jsx"
-              style={{
-                padding: 25,
-                borderRadius: "0 0 6px 6px",
-                overflow: "auto",
-                width: 0,
-                flexGrow: 1,
-              }}
-            >
+    <div className="demo">
+      <div className="container">{props.children}</div>
+      <div className="code-example-box">
+        <div
+          className={codeVisible ? "code-description show" : "code-description"}
+        >
+          <span>{props.description}</span>
+          <Button onClick={() => setCodeVisible(!codeVisible)}>查看代码</Button>
+        </div>
+        <div
+          className={codeVisible ? "code-example show" : "code-example hidden"}
+        >
+          <div className="wrapper">
+            <pre className="language-jsx pre">
               <code>{props.code}</code>
             </pre>
-          )}
+          </div>
         </div>
       </div>
     </div>

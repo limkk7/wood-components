@@ -2,8 +2,8 @@ import React from "react";
 import ReactDOM from "react-dom";
 import { HashRouter as Router, Route, Link, NavLink } from "react-router-dom";
 import IconExample from "icon/icon.example";
-import ButtonExample from "button/button.example";
-import LayoutExample from "layout/layout.example";
+import ButtonDemo from "button/demo/button.demo";
+import LayoutDemo from "layout/demo/layout.demo";
 import { Layout, Header, Aside, Content, Footer, Icon } from "wood-components";
 import DialogDemo from "dialog/dialog.demo";
 import "example.scss";
@@ -36,9 +36,9 @@ ReactDOM.render(
         </Aside>
         <Content className="content">
           <Route path="/icon" component={IconExample} />
-          <Route path="/button" component={ButtonExample} />
+          <Route path="/button" component={ButtonDemo} />
           <Route path="/dialog" component={DialogDemo} />
-          <Route path="/layout" component={LayoutExample} />
+          <Route path="/layout" component={LayoutDemo} />
         </Content>
       </Layout>
       <Footer className="footer">
