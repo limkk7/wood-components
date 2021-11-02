@@ -27,7 +27,7 @@ const DialogDemo = () => {
         <ConfirmExample />
       </Demo>
       <Demo
-        description="modal 框可以控制内部 onClose 的调用"
+        description="modal 框可以通过返回的函数控制关闭的时机"
         code={require("!!raw-loader!./dialog.modal-example.tsx").default}
       >
         <ModalExample />

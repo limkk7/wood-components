@@ -14,13 +14,13 @@ const ButtonDemo = () => {
       <h2>代码示例</h2>
       <Demo
         code={require("!!raw-loader!./button.theme-example.tsx").default}
-        description="主按钮、次按钮、虚线按钮、文本按钮和链接按钮。"
+        description="主按钮、默认按钮、危险按钮、链接按钮和文本按钮。"
       >
         <ButtonExample />
       </Demo>
       <Demo
         code={require("!!raw-loader!./button.status-example.tsx").default}
-        description="按钮有四种类型：默认按钮、主要按钮、虚线按钮和危险按钮。"
+        description="禁用按钮。"
       >
         <ButtonStatusExample />
       </Demo>
