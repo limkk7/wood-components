@@ -57,6 +57,8 @@
     "webpack-dev-server": "^3.2.1"
   },
   "dependencies": {
+    "@types/enzyme": "^3.10.10",
+    "D": "^1.0.0",
     "react": "^16.8.4",
     "react-dom": "^16.8.4",
     "react-router-dom": "^5.0.0"

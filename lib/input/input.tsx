@@ -1,5 +1,5 @@
 import * as React from "react";
-import classnames, { scopedClassMaker } from "helpers/classes";
+import classnames, { scopedClassMaker } from "../helpers/classes";
 import "./input.scss";
 interface Props extends React.InputHTMLAttributes<HTMLInputElement> {
   disabled?: boolean | undefined;
@@ -20,30 +20,17 @@ const Input = React.forwardRef<HTMLInputElement, Props>(
         ),
       [className]
     );
-    if (onChange) {
-      return (
-        <input
-          type="text"
-          disabled={disabled}
-          className={classes}
-          {...rest}
-          value={value}
-          ref={ref}
-          onChange={(e) => onChange(e)}
-        />
-      );
-    } else {
-      return (
-        <input
-          type="text"
-          disabled={disabled}
-          value={value}
-          ref={ref}
-          className={classes}
-          {...rest}
-        />
-      );
-    }
+    return (
+      <input
+        type="text"
+        disabled={disabled}
+        className={classes}
+        {...rest}
+        value={value}
+        ref={ref}
+        onChange={(e) => onChange && onChange(e)}
+      />
+    );
   }
 );
 
