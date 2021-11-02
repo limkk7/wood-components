@@ -1,4 +1,4 @@
-import { Icon } from "wood-components";
+import { Icon } from "../wood-components";
 import * as React from "react";
 import { scopedClassMaker } from "../helpers/classes";
 import "./dialog.scss";
