@@ -1,5 +1,5 @@
 import * as React from "react";
-import classnames, { scopedClassMaker } from "helpers/classes";
+import classnames, { scopedClassMaker } from "../helpers/classes";
 import "./button.scss";
 interface Props extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   theme?: string;
