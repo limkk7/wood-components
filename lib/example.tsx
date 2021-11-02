@@ -4,6 +4,7 @@ import { HashRouter as Router, Route, Link, NavLink } from "react-router-dom";
 import ButtonDemo from "button/demo/button.demo";
 import SwitchDemo from "switch/demo/switch.demo";
 import LayoutDemo from "layout/demo/layout.demo";
+import InputDemo from "input/demo/input.demo";
 import { Layout, Header, Aside, Content, Footer, Icon } from "wood-components";
 import DialogDemo from "dialog/demo/dialog.demo";
 import Introduction from "./introduction";
@@ -31,6 +32,9 @@ ReactDOM.render(
               <NavLink to="/button">Button</NavLink>
             </li>
             <li>
+              <NavLink to="/input">Input</NavLink>
+            </li>
+            <li>
               <NavLink to="/layout">Layout</NavLink>
             </li>
             <li>
@@ -43,6 +47,7 @@ ReactDOM.render(
         </Aside>
         <Content className="content">
           <Route path="/button" component={ButtonDemo} />
+          <Route path="/input" component={InputDemo} />
           <Route path="/layout" component={LayoutDemo} />
           <Route path="/switch" component={SwitchDemo} />
           <Route path="/dialog" component={DialogDemo} />

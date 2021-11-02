@@ -11,7 +11,7 @@ const Introduction = () => {
 
       <h2>使用 TypeScript</h2>
       <section>
-        TypeScript提供了静态类型检查，让开发人员可以在代码运行之前识别某些类型问题。
+        TypeScript提供了静态类型检查，让开发人员可以在代码运行前就识别某些类型问题。
       </section>
       <h2>没有额外依赖</h2>
       <section>

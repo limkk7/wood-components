@@ -5,6 +5,7 @@ import Aside from "./layout/aside";
 import Content from "./layout/content";
 import Footer from "./layout/footer";
 export { Switch } from "switch/switch";
+export { Input } from "input/input";
 export { Dialog, alert, confirm, modal } from "./dialog/dialog";
 export { default as Icon } from "./icon/icon";
 export { Button } from "button/button";
