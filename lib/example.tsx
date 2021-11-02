@@ -1,44 +1,52 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import { HashRouter as Router, Route, Link, NavLink } from "react-router-dom";
-import IconExample from "icon/icon.example";
-import ButtonExample from "button/button.example";
-import LayoutExample from "layout/layout.example";
+import ButtonDemo from "button/demo/button.demo";
+import SwitchDemo from "switch/demo/switch.demo";
+import LayoutDemo from "layout/demo/layout.demo";
 import { Layout, Header, Aside, Content, Footer, Icon } from "wood-components";
-import DialogDemo from "dialog/dialog.demo";
+import DialogDemo from "dialog/demo/dialog.demo";
+import Introduction from "./introduction";
 import "example.scss";
 
 ReactDOM.render(
   <Router>
     <Layout className="index-layout">
       <Header className="header">
-        <Link to="/">
+        <Link to="/introduction">
           <Icon name="wood" className="logo" />
         </Link>
       </Header>
       <Layout className="main">
         <Aside className="aside">
-          <h2>组件</h2>
+          <h2>总览</h2>
           <ul>
             <li>
-              <NavLink to="/icon">Icon</NavLink>
+              <NavLink to="/introduction">介绍</NavLink>
             </li>
+          </ul>
+          <h2>组件</h2>
+          <ul>
             <li>
               <NavLink to="/button">Button</NavLink>
             </li>
             <li>
-              <NavLink to="/dialog">Dialog</NavLink>
+              <NavLink to="/layout">Layout</NavLink>
             </li>
             <li>
-              <NavLink to="/layout">layout</NavLink>
+              <NavLink to="/switch">Switch</NavLink>
+            </li>
+            <li>
+              <NavLink to="/dialog">Dialog</NavLink>
             </li>
           </ul>
         </Aside>
         <Content className="content">
-          <Route path="/icon" component={IconExample} />
-          <Route path="/button" component={ButtonExample} />
+          <Route path="/button" component={ButtonDemo} />
+          <Route path="/layout" component={LayoutDemo} />
+          <Route path="/switch" component={SwitchDemo} />
           <Route path="/dialog" component={DialogDemo} />
-          <Route path="/layout" component={LayoutExample} />
+          <Route path="/introduction" component={Introduction} />
         </Content>
       </Layout>
       <Footer className="footer">

@@ -4,18 +4,8 @@ import Header from "./layout/header";
 import Aside from "./layout/aside";
 import Content from "./layout/content";
 import Footer from "./layout/footer";
-import { Button } from "./button/button";
-import { Dialog, alert, confirm, modal } from "./dialog/dialog";
+export { Switch } from "switch/switch";
+export { Dialog, alert, confirm, modal } from "./dialog/dialog";
 export { default as Icon } from "./icon/icon";
-export {
-  Button,
-  Layout,
-  Header,
-  Aside,
-  Content,
-  Footer,
-  Dialog,
-  alert,
-  confirm,
-  modal,
-};
+export { Button } from "button/button";
+export { Layout, Header, Aside, Content, Footer };

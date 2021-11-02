@@ -1,21 +1,24 @@
 import * as React from "react";
 import classnames, { scopedClassMaker } from "helpers/classes";
-import "./button.scss";
+import "./switch.scss";
 interface Props extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   theme?: string;
   size?: string;
   loading?: boolean;
   disabled?: boolean | undefined;
+  checked?: boolean | undefined;
+  onChange?: () => void;
 }
-const sc = scopedClassMaker("w-ui-button");
+const sc = scopedClassMaker("w-ui-switch");
 
-const Button: React.FC<Props> = ({
+const Switch: React.FC<Props> = ({
   className,
   theme = "",
   size = "",
-  children,
   loading,
   disabled,
+  checked,
+  onChange,
   ...rest
 }) => {
   const classes = React.useMemo(
@@ -24,19 +27,25 @@ const Button: React.FC<Props> = ({
         sc({
           "": true,
           [theme]: true,
-          loadingIndicator: !!loading,
+          checked: !!checked,
         }),
         className
       ),
-    [theme, className, loading]
+    [checked, className]
   );
 
   return (
-    <button className={classes} disabled={disabled} {...rest}>
-      {loading && <span className="w-ui-loadingIndicator"></span>}
-      {children}
+    <button
+      className={classes}
+      onClick={() => {
+        !disabled && onChange && onChange();
+      }}
+      disabled={disabled}
+      {...rest}
+    >
+      <span></span>
     </button>
   );
 };
 
-export { Button };
+export { Switch };

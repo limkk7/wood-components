@@ -56,12 +56,12 @@ $padding: 50px;
           color: #595959;
           &.active {
             color: #1890ff;
-            background-color: desaturate($color: #e6f7ff, $amount: 50%);
+            background-color: #e6f7ff;
             border-right: 5px solid #1890ff;
           }
           &:hover {
             color: #1890ff;
-            background-color: #e6f7ff;
+            // background-color: #e6f7ff;
           }
         }
       }
@@ -69,6 +69,21 @@ $padding: 50px;
   }
   .content {
     padding: 25px;
+    > div {
+      max-width: 1000px;
+      margin: 0 auto;
+      > section {
+        padding: 20px;
+        padding-bottom: 0;
+        padding-left: 25px;
+        margin: 0 auto;
+      }
+      > h2 {
+        padding: 20px;
+        padding-bottom: 0;
+        padding-left: 0px;
+      }
+    }
   }
   .footer {
     background-color: #34383b;

@@ -5,7 +5,7 @@ module.exports = {
   },
   resolve: {
     extensions: ['.ts', '.tsx', '.js', '.jsx'],
-    modules: ["node_modules", path.resolve(__dirname, "lib")]
+    modules: [path.resolve(__dirname, "lib"), "node_modules"]
   },
   output: {
     library: "wood-components",
