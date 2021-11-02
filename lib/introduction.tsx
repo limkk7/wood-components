@@ -18,7 +18,7 @@ const Introduction = () => {
         wood-components 只依赖 React、ReactDOM 两个核心库以及 PropTypes
         进行类型检查，没有其他外部依赖。
       </section>
-      <h2>开始使用</h2>
+      <h2>安装</h2>
       <section>$ npm i wood-components</section>
       <section>$ yarn add wood-components</section>
     </div>
