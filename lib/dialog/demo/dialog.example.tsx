@@ -3,31 +3,31 @@ import { useState } from "react";
 import { Dialog, Button } from "wood-components";
 
 export default () => {
-  const [x, setX] = useState(false);
-  const [y, setY] = useState(false);
+  const [codeVisible, setCodeVisible] = useState(false);
+  const [visible, setVisible] = useState(false);
   return (
     <>
-      <Button onClick={() => setX(!x)}>show Modal</Button>
+      <Button onClick={() => setCodeVisible(!codeVisible)}>show Modal</Button>
       <Dialog
-        onClose={() => setX(!x)}
-        visible={x}
+        onClose={() => setCodeVisible(!codeVisible)}
+        visible={codeVisible}
         title={<div style={{ textAlign: "center" }}>Modal</div>}
         describe={<div style={{ textAlign: "center" }}>THIS IS MODAL</div>}
         buttons={[
-          <button onClick={() => setX(false)}>cancel</button>,
-          <button>submit</button>,
+          <button onClick={() => setCodeVisible(false)}>cancel</button>,
+          <button onClick={() => setCodeVisible(false)}>submit</button>,
         ]}
       >
         <div>Some contents...</div>
       </Dialog>
-      <Button onClick={() => setY(!y)}>show Modal</Button>
+      <Button onClick={() => setVisible(!visible)}>show Modal</Button>
       <Dialog
-        onClose={() => setY(!y)}
-        visible={y}
+        onClose={() => setVisible(!visible)}
+        visible={visible}
         closeMark={false}
         buttons={[
-          <button onClick={() => setY(false)}>cancel</button>,
-          <button onClick={() => setY(false)}>submit</button>,
+          <button onClick={() => setVisible(false)}>cancel</button>,
+          <button onClick={() => setVisible(false)}>submit</button>,
         ]}
       >
         <div>Some contents...</div>
