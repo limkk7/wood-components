@@ -1,6 +1,13 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import { HashRouter as Router, Route, Link, NavLink } from "react-router-dom";
+import {
+  HashRouter as Router,
+  Route,
+  Link,
+  NavLink,
+  Redirect,
+  Switch,
+} from "react-router-dom";
 import ButtonDemo from "button/demo/button.demo";
 import SwitchDemo from "switch/demo/switch.demo";
 import LayoutDemo from "layout/demo/layout.demo";
@@ -46,12 +53,17 @@ ReactDOM.render(
           </ul>
         </Aside>
         <Content className="content">
-          <Route path="/button" component={ButtonDemo} />
-          <Route path="/input" component={InputDemo} />
-          <Route path="/layout" component={LayoutDemo} />
-          <Route path="/switch" component={SwitchDemo} />
-          <Route path="/dialog" component={DialogDemo} />
-          <Route path="/introduction" component={Introduction} />
+          <Switch>
+            <Route path="/button" exact component={ButtonDemo} />
+            <Route path="/input" exact component={InputDemo} />
+            <Route path="/layout" exact component={LayoutDemo} />
+            <Route path="/switch" exact component={SwitchDemo} />
+            <Route path="/dialog" exact component={DialogDemo} />
+            <Route path="/introduction" exact component={Introduction} />
+            <Route exact path="/">
+              <Redirect to="/introduction" />
+            </Route>
+          </Switch>
         </Content>
       </Layout>
       <Footer className="footer">
