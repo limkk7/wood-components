@@ -4,6 +4,7 @@
 .vscode
 /doc/
 .history
+public
 # Logs
 logs
 *.log

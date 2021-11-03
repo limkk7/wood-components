@@ -28,7 +28,9 @@ const Demo: React.FC<Props> = (props) => {
           className={codeVisible ? "code-description show" : "code-description"}
         >
           <span>{props.description}</span>
-          <Button onClick={() => setCodeVisible(!codeVisible)}>查看代码</Button>
+          <Button onClick={() => setCodeVisible(!codeVisible)}>
+            {codeVisible ? "隐藏代码" : "查看代码"}
+          </Button>
         </div>
         <div
           className={codeVisible ? "code-example show" : "code-example hidden"}

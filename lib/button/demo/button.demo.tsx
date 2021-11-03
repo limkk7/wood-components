@@ -20,7 +20,7 @@ const ButtonDemo = () => {
       </Demo>
       <Demo
         code={require("!!raw-loader!./button.status-example.tsx").default}
-        description="禁用按钮。"
+        description="禁用状态 和 loading状态。"
       >
         <ButtonStatusExample />
       </Demo>
