@@ -36,6 +36,9 @@ ReactDOM.render(
           <h2>组件</h2>
           <ul>
             <li>
+              <NavLink to="/dialog">Dialog</NavLink>
+            </li>
+            <li>
               <NavLink to="/button">Button</NavLink>
             </li>
             <li>
@@ -46,9 +49,6 @@ ReactDOM.render(
             </li>
             <li>
               <NavLink to="/switch">Switch</NavLink>
-            </li>
-            <li>
-              <NavLink to="/dialog">Dialog</NavLink>
             </li>
           </ul>
         </Aside>
