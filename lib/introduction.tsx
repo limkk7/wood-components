@@ -3,10 +3,9 @@ import React from "react";
 const Introduction = () => {
   return (
     <div>
-      <h1>wood-components</h1>
+      <h1>wood-UI</h1>
       <section>
-        wood-components 是一套基于 React
-        的组件库，色彩、样式的设计参考了其他组件库。
+        wood-UI 是一套基于 React 的组件库，色彩、样式的设计参考了其他组件库。
       </section>
 
       <h2>使用 TypeScript</h2>
@@ -15,7 +14,7 @@ const Introduction = () => {
       </section>
       <h2>没有额外依赖</h2>
       <section>
-        wood-components 只依赖 React、ReactDOM 两个核心库以及 PropTypes
+        wood-UI 只依赖 React、ReactDOM 两个核心库以及 PropTypes
         进行类型检查，没有其他外部依赖。
       </section>
       <h2>安装</h2>
