@@ -3,12 +3,7 @@ import * as React from "react";
 import { scopedClassMaker } from "../helpers/classes";
 import "./dialog.scss";
 import ReactDOM from "react-dom";
-import {
-  ReactNode,
-  MouseEventHandler,
-  cloneElement,
-  ReactElement,
-} from "react";
+import { ReactNode, cloneElement, ReactElement } from "react";
 
 interface Props {
   visible?: boolean;
@@ -18,13 +13,12 @@ interface Props {
   title?: ReactNode;
   describe?: ReactNode;
   closeOnClickMask?: boolean;
-  onClose?: MouseEventHandler;
+  onClose?: () => void;
 }
 const scopedClass = scopedClassMaker("w-ui-dialog");
 const sc = scopedClass;
 
 const Dialog: React.FC<Props> = ({
-  enableMask,
   onClose,
   visible,
   title,
@@ -32,21 +26,21 @@ const Dialog: React.FC<Props> = ({
   children,
   buttons,
   closeMark,
-  closeOnClickMask,
+  closeOnClickMask = true,
 }) => {
-  const onClickClose: MouseEventHandler = (e) => {
+  const onClickClose = () => {
     if (onClose) {
-      onClose(e);
+      onClose();
     }
   };
-  const onClickMask: MouseEventHandler = (e) => {
+  const onClickMask = () => {
     if (closeOnClickMask && onClose) {
-      onClose(e);
+      onClose();
     }
   };
   const portalNode = visible && (
     <>
-      {enableMask && <div className={sc("mask")} onClick={onClickMask}></div>}
+      <div className={sc("mask")} onClick={onClickMask}></div>
       <div className="w-ui-dialog">
         {closeMark ? (
           <div className={sc("close")} onClick={onClickClose}>
@@ -81,6 +75,7 @@ const modal = (
   onClose?: () => void
 ) => {
   const close = () => {
+    //使用内部state看看
     ReactDOM.render(React.cloneElement(component, { visible: false }), div);
     ReactDOM.unmountComponentAtNode(div);
     div.remove();

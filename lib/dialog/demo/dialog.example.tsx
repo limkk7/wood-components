@@ -9,7 +9,10 @@ export default () => {
     <>
       <Button onClick={() => setCodeVisible(!codeVisible)}>show Modal</Button>
       <Dialog
-        onClose={() => setCodeVisible(!codeVisible)}
+        closeOnClickMask={false}
+        onClose={() => {
+          setCodeVisible(!codeVisible);
+        }}
         visible={codeVisible}
         title={<div style={{ textAlign: "center" }}>Modal</div>}
         describe={<div style={{ textAlign: "center" }}>THIS IS MODAL</div>}
